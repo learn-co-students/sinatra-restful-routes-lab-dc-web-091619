@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ID page</title>
+</head>
+<body>
+    <h1><%= @recipe.name %> Recipe</h1>
+    <p>Ingredients: <%= @recipe.ingredients %></p>
+    <p>Cook Time: <%= @recipe.cook_time %> minutes</p>
+
+    <form action="/recipes/<%= @recipe.id %>" method= "POST">
+        <input type= "hidden" name= "_method" value= "delete">
+        <input type= "submit" value="delete">
+    </form>
+</body>
+</html>
