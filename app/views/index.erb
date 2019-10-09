@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Recipes</title>
+    
+</head>
+<body>
+    <% @recipes.each do |recipe| %>
+        <div><a href="/recipes/<%= recipe.id %>"Name: <%= recipe.name %></a>
+            Ingredients: <%= recipe.ingredients %>
+            Cook time <%= recipe.cook_time %>
+    <% end %>
+</body>
+</html>
