@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>All Recipes</title>
+</head>
+<body>
+    <% n = 0%>
+    <% @recipes.each do |recipe| %>
+    <h2><a href="/recipes/<%= recipe.id %>">Recipe <%= n += 1%></a></h2>
+    <p>Name: <%= recipe.name %></p>
+    <p>Ingredients: <%= recipe.ingredients %></p>
+    <p>Cook Time: <%= recipe.cook_time %></p>
+    <% end %>
+</body>
+</html>
